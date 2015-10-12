@@ -1,0 +1,41 @@
+.subject-card {
+	width: 300px;
+	height: 275px;
+	margin: 5px;
+	vertical-align: top;
+	display: inline-block;
+
+	quote {
+		font-style: italic;
+	}
+
+	&:hover {
+		border: 1px solid black;
+		
+		.panel-body i {
+			color: darken($grey, 20%);
+		}
+	}
+
+	.panel-heading {
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+	
+	.panel-body i {
+		font-size: 150px;
+		margin: 30px 75px;
+		color: $grey;
+	}
+
+	.panel-image {
+		padding: 0;
+		margin: 0;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

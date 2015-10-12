@@ -1,0 +1,40 @@
+<div class="subject-modal">
+	<form ng-submit="post()" class="form">
+		<div class="modal-header">
+			<h3 class="modal-title">Edit your subject</h3>
+		</div>
+		<div class="modal-body">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="form-group">
+						<label for="subjectName">Goal</label>
+
+						<input ng-disabled="editMode" ng-blur="updateSubject()" type="text" ng-model="newSubject.name" class="form-control" id="subjectName" placeholder="Salsa, Knitting, etc." typeahead="subject for subject in getSubjects($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" typeahead-wait-ms="500">
+
+					</div>
+					<div class="form-group">
+						<label for="quote">Quote</label>
+						<input type="text" ng-model="newSubject.quote" class="form-control" id="quote">
+					</div>
+					<div class="form-group">
+						<label for="from">From</label>
+						<input type="text" ng-model="newSubject.from" class="form-control" id="from">
+					</div>
+
+					<div class="form-group">
+						<h2>Preview</h2>
+						<div teacher-subject-card subject="newSubject"></div>	
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button ng-show="editMode" class="btn btn-lg btn-danger pull-left" type="button" ng-click="remove()">Remove this subject</button>
+			<button class="btn btn-lg btn-default" type="button" ng-click="cancel()">Cancel</button>
+			<button class="btn btn-lg btn-success" type="submit">OK</button>
+		</div>
+	</form>
+</div>

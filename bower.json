@@ -1,0 +1,22 @@
+{
+  "name": "nextdoorteacher",
+  "description": "Find nearby teachers on any subject.",
+  "version": "0.0.0",
+  "homepage": "https://nextdoorteacher.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-ui-router": "0.2.x",
+    "bootstrap": "~3.3.4",
+    "a0-angular-storage": "0.0.x",
+    "angular-google-maps": "~2.1.5",
+    "angular-bootstrap": "~0.13.4",
+    "ng-file-upload": "~7.2.1",
+    "bootstrap-social": "~4.10.1",
+    "angular-ui-notification": "~0.0.14",
+    "ng-idle": "~1.1.0",
+    "ngImgCrop": "~0.3.2",
+    "angular-bootstrap-lightbox": "~0.9.0"
+  }
+}

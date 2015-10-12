@@ -1,0 +1,41 @@
+<div class="my-profile">
+	<div class="panel panel-success">
+		<div class="panel-heading">Your profile</div>
+		<div class="panel-body">
+			<p>
+				This is where the user leaves a personal text that other users can read!
+			</p>
+			<textarea rows="5" ng-model="user.text" class="personal-text" placeholder="Say something about yourself."></textarea>
+			<button ng-disabled="newText == user.text" ng-click="saveText()" class="btn btn-primary pull-right"><i class="fa fa-paper-plane"></i> Save</button>
+			
+			<center class="clear">
+				<h1>Goals for the next 10 years</h1>
+				<div ng-click="openSubjectModal(s, true)" ng-repeat="s in user.subjects track by s.name" teacher-subject-card subject="s"></div>
+
+				<div ng-click="addGoal()" class="panel panel-default subject-card">
+					<div class="panel-heading">Add another goal</div>
+					<div class="panel-body">
+						<i class="fa fa-plus"></i>
+					</div>
+				</div>
+			</center>
+
+		</div>
+	</div>
+
+	<div class="panel panel-info">
+		<div class="panel-heading" ng-click="hidePersonalPanel = !hidePersonalPanel"><a href="#"><i ng-class="hidePersonalPanel ? 'fa-chevron-down' : 'fa-chevron-up'" class="fa"></i> Your account details</a></div>
+		<div class="panel-body" collapse="hidePersonalPanel">
+			<table class="table table-hover basic-profile">
+				<tbody info-row value="user.firstName" label="firstName" placeholder="Jacky"></tbody>
+				<tbody info-row value="user.lastName" label="lastName" placeholder="Mandelbrot"></tbody>
+				<tbody info-row value="user.phone" label="phone" placeholder="+62 123456789"></tbody>
+				<tbody info-row value="user.email" label="email" placeholder="jacky@mandelbrot.com" readonly="user.loginType == 'oauth'"></tbody>
+				<tbody switch-row current="user.gender" value1="male" value2="female" label="gender"></tbody>
+				<tbody password-row readonly="user.loginType == 'oauth'"></tbody>
+				<tbody array-row array="user.interests" label="interests"></tbody>
+
+			</table>
+		</div>
+	</div>
+</div>

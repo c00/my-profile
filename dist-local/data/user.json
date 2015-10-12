@@ -1,0 +1,38 @@
+{
+	"firstName":"Co",
+	"lastName":"van Leeuwen",
+	"email":"c00yt825@gmail.com",
+	"phone":"+62 818 054 046 45",
+	"interests":[
+		"Salsa",
+		"Travelling",
+		"Magic",
+    "Long walks on the beach"
+	],
+	"gender":"male",
+	"picture":{
+		"id":"666",
+		"hash":"cndsowekjdcsoac"
+	},
+	"text": "I am a professional programmer, looking to help others out with my skills. Other than development I'm also a salsa dancer and a Magician!",
+	"subjects":[
+    {
+      "name":"Become famous",
+      "pictureId":"famous",
+      "quote":"Oh how wrong we were to think immortality meant never dying.",
+      "from":"Gerard Way"
+    },
+    {
+      "name":"Gain superpowers",
+      "pictureId":"super",
+      "quote":"With great power comes great responsibility",
+      "from":"Ben Parker"
+    },
+    {
+      "name":"Rule the world",
+      "pictureId":"brain",
+      "quote":"Do not mock a love-smitten mouse.",
+      "from":"Brain"
+    }
+  ]
+}

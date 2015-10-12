@@ -1,0 +1,35 @@
+<tbody>
+	<tr>
+		<td class="title">{{labelText}}</td>
+		<td>{{array | arrayToList}}</td>
+		<td class="edit"><a ng-click="collapseRow()" ng-hide="readonly"><i class="fa fa-pencil"></i> edit</a></td>
+	</tr>
+	<tr ng-hide="readonly" collapse="collapse">
+		<td  colspan="3">
+			<div class="child-row">
+				<form class="form" ng-submit="add()">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" ng-model="addValue" class="form-control" placeholder="Salsa, Knitting, Flower arranging, etc.">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="fa fa-plus"></i></button>
+							</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="array-box">
+							<span ng-repeat="v in newArray" class="label label-success tag">{{v}} <a ng-click="remove(v)"><i class="fa fa-times"></i></a></span>
+						</div>
+					</div>
+
+					<button ng-disabled="newValue == '' || valueUpdating" type="button" ng-click="setValue()" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Update</button> 
+					
+					<span ng-show="showError" class="text-danger">{{errorText}}</span>
+
+				</form>
+			</div>
+			<hr>
+		</td>
+	</tr>
+</tbody>

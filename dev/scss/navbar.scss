@@ -1,0 +1,46 @@
+#header {
+	height: $header-height;
+}
+
+.navbar-brand {
+	float: none;
+	height: $header-height;
+	padding: 15px 15px;
+	font-size: 22px;
+	line-height: 22px;;
+
+	img {
+		display: inline-block;
+		padding: 4px;
+	}
+
+	span {
+		position: relative;
+		top: 5px;
+	}
+}
+
+.navbar {
+	/* border: 0px;
+	margin-bottom: 0px; */
+	height: 100%;
+
+	a.you {
+		padding: 0;
+	}
+
+	img.you {
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		margin: 8px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-collapse {
+		background-color: rgba(#e7e7e7,  1);
+		padding-left: 30px;
+		font-weight: bold;
+	}
+}

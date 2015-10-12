@@ -1,0 +1,123 @@
+.chat-container {
+	height: calc(100% - #{$header-height} - 30px);
+	margin-top: 15px;
+	overflow: hidden;
+	margin-bottom: 15px;
+
+	.contacts {
+		padding: 0px;
+		max-height: 100%;
+		overflow: auto;	
+		margin-bottom: 0;
+
+		.selected {
+			background-color: darken($grey, 10%);
+		}
+
+		ul {
+			margin-bottom: 0;
+		}
+
+		.contact:hover {
+			background-color: darken($grey, 5%);
+		}
+
+		.contact {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 100%;
+			overflow: hidden;
+			/* margin-bottom: 10px; */
+			cursor: pointer;
+			padding: 10px;
+
+			h1 {
+				margin: 0;
+				font-size: 1.7em;
+				padding-top: 5px;
+			}
+			img {
+				float: left;
+				margin-right: 10px;
+			}
+		}
+
+		@media screen and (max-width: $sm-min) {
+			img {
+				width: 100%;
+			}
+		}
+
+	}
+
+	.type-message {
+		margin-top: 15px;
+	}
+
+	#bottom {
+		clear: both;
+	}
+
+	.chats {
+		max-height: calc(100% - 50px);
+		overflow: auto;
+
+		.bubble 
+		{
+			clear: both;
+			position: relative;
+			max-width: 350px;
+			min-height: 40px;
+			padding: 8px;
+			margin-top: 10px;
+			background: $grey;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+
+			small {
+				font-size: 80%;
+				float: right;
+			}
+		}
+
+		.bubble.pull-right {
+			margin-left: 30px;
+			margin-right: 20px;
+		}
+
+		.bubble.pull-left {
+			margin-right: 30px;
+			margin-left: 20px;
+		}
+
+		.bubble:after {
+			content: '';
+			position: absolute;
+			border-style: solid;
+
+			border-color: transparent $grey;
+			display: block;
+			width: 0;
+			z-index: 1;
+			right: -12px;
+			top: 10px;
+		}
+
+		.bubble.pull-right:after 
+		{
+			border-width: 10px 0 10px 13px;
+			right: -12px;	
+		}
+
+		.bubble.pull-left:after 
+		{
+			border-width: 10px 13px 10px 0;
+			left: -12px;	
+		}
+	}
+
+	
+
+	
+}

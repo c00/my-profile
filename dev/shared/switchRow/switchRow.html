@@ -1,0 +1,28 @@
+<tbody>
+	<tr>
+		<td class="title">{{labelText}}</td>
+		<td>{{current}}</td>
+		<td class="edit"><a ng-click="collapse = !collapse" ng-hide="readonly"><i class="fa fa-pencil"></i> edit</a></td>
+	</tr>
+	<tr ng-hide="readonly" collapse="collapse">
+		<td  colspan="3">
+			<div class="child-row">
+				<form class="form-inline" ng-submit="setValue()">
+					<div class="form-group">
+
+						<div class="btn-group">
+							<label class="btn btn-default" ng-model="newValue" btn-radio="value1"><i class="fa fa-mars"></i> {{value1}}</label>
+							<label class="btn btn-default" ng-model="newValue" btn-radio="value2"><i class="fa fa-venus"></i> {{value2}}</label>
+						</div>
+					</div>
+
+					<button ng-disabled="newValue == '' || valueUpdating" type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Update</button> 
+					
+					<span ng-show="showError" class="text-danger">{{errorText}}</span>
+
+				</form>
+			</div>
+			<hr>
+		</td>
+	</tr>
+</tbody>

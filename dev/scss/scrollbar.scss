@@ -1,0 +1,28 @@
+/* https://mikethedj4.github.io/Webkit-Scrollbar-Generator/ */
+$scroll-dark-grey: #666666;
+$scroll-light-grey: #e1e1e1;
+
+::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background: lighten($scroll-dark-grey, 10%);
+	border: none;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: $scroll-dark-grey;
+}
+::-webkit-scrollbar-track {
+	background: $scroll-light-grey;
+	border: 10px none #ffffff;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}

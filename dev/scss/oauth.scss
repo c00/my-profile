@@ -1,0 +1,14 @@
+/* oAuth */
+.oauth {
+	@include background-fullscreen('../img/almost_there.jpg');
+	text-align: center;
+	color: #fff;
+	p {
+		font-size: 1.3em;
+	}
+	span {
+		margin-top: 25px;
+		font-size: 6em;
+	}
+}
+/* END oAuth */
