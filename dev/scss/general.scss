@@ -8,14 +8,6 @@ body, html, #content {
 	clear: both;
 }
 
-.room-up-top {
-	margin-top: 20px;
-}
-
-.always-big-please {
-	height: 100%;
-}
-
 .error {
 	i {
 		font-size: 2em; 
@@ -30,13 +22,6 @@ body, html, #content {
 	overflow: hidden;
 }
 
-@media screen and (min-width: $sm-min) {
-
-	div.big-please {
-		height: 100%;
-	}
-}
-
 .ui-notification:hover {
 	opacity: 0.9;
 }
@@ -49,49 +34,4 @@ a[ng-click] {
 	position: absolute;
 	top: 50%;
 	@include transform(translatey(-50%));
-}
-
-
-span.rating {
-	color: $star-color;	
-	font-size: 20px;
-}
-span.rating-sm {
-	font-size: 15px;	
-}
-
-span.rating-lg{
-	font-size: 25px;	
-}
-
-
-.crossed {
-	text-decoration: line-through;
-}
-
-img.profile {
-	@include border-radius(50%);
-}
-
-img.img-small {
-	width: 60px;
-	height: auto;
-}
-
-img.img-normal {
-	width: 104px;
-	height: auto;
-}
-
-img.img-medium {
-	width: 200px;
-	height: auto;
-}
-
-.part {
-	position: relative;
-	z-index:3;
-	background:rgba($light-blue, 0.45);
-	color: white;
-}
-/* END General stuff */
+} 
