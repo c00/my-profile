@@ -35,6 +35,7 @@ module.exports = function (grunt) {
 				/* Main project files (No Js) */
 				{ expand: true, cwd: 'dev/', src: ['*.html', 'data/**', 'components/**/*.html', 'img/**', 'shared/**/*.html'], dest: 'dist/' },
 				/* Non-CDN css */
+				{ expand: true, cwd: 'dev/css/', src: ['bootstrap.min.css'], dest: 'dist/css' },
 				{ expand: true, cwd: 'dev/bower_components/bootstrap-social/', src: ['bootstrap-social.css'], dest: 'dist/css' },
 				{ expand: true, cwd: 'dev/bower_components/angular-ui-notification/dist/', src: ['angular-ui-notification.min.css'], dest: 'dist/css/' },
 				{ expand: true, cwd: 'dev/bower_components/ngImgCrop/compile/minified/', src: ['ng-img-crop.css'], dest: 'dist/css/' },
@@ -58,6 +59,7 @@ module.exports = function (grunt) {
 				/* Main project files */
 				{ expand: true, cwd: 'dev/', src: ['*.html', 'data/**', 'components/**/*.html', 'img/**', 'shared/**/*.html'], dest: 'dist-local/' },
 				/* Non-CDN css */
+				{ expand: true, cwd: 'dev/css/', src: ['bootstrap.min.css'], dest: 'dist-local/css' },
 				{ expand: true, cwd: 'dev/bower_components/bootstrap-social/', src: ['bootstrap-social.css'], dest: 'dist-local/css' },
 				{ expand: true, cwd: 'dev/bower_components/angular-ui-notification/dist/', src: ['angular-ui-notification.min.css'], dest: 'dist-local/css/' },
 				{ expand: true, cwd: 'dev/bower_components/ngImgCrop/compile/minified/', src: ['ng-img-crop.css'], dest: 'dist-local/css/' },
